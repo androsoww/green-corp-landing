@@ -60,6 +60,7 @@ button:hover {
       height: 100px;
       animation: rotation 10s infinite linear;
       position: absolute;
+      animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
 .about {
@@ -219,20 +220,41 @@ footer {
     transform: rotate(360deg);
   }
 }
-/*Мобильные устройства*/
-@media (max-widht: 720px) {
-    header{
+/* Планшеты */
+@media (max-width: 1024px) {
+    .about {
+        padding: 115px 20px;
+    }
+  
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+  
+    .about__image {
+        width: 280px;
+    }
+  
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+ }
+  
+ /* Мобильные устройства */
+ @media (max-width: 720px) {
+    header {
         padding: 10px;
     }
-
+  
     .header__logo {
         height: 20px;
     }
-
-    .header a {
+  
+    header a {
         margin-right: 10px;
     }
-
+  
     .about {
         flex-direction: column-reverse;
         padding: 50px 10px;
@@ -266,25 +288,5 @@ footer {
   
     .footer__container {
         flex-direction: column;
-    }
- }
-/*Планшеты*/
-@media (max-width: 1024px) {
-    .about {
-        padding: 115px 20px;
-    }
-  
-    .about h1 {
-        font-size: 36px;
-        line-height: 40px;
-    }
-  
-    .about__image {
-        width: 280px;
-    }
-  
-    .about__sun-image {
-        width: 75px;
-        height: 75px;
     }
  }
